@@ -8,12 +8,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    var name = ""
+    var surname = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let name = Persistance.shared.userName {
+            self.name = name
+        }
+        
+        if let surname = Persistance.shared.userSurname {
+            self.surname = surname
+        }
+        
+        nameLabel.text = "Ваше имя: \(surname) \(name)"
     }
 
+    @IBAction func nameChanged(sender: UITextField) {
+        Persistance.shared.userName = sender.text
+    }
+    
+    @IBAction func surnameChanged(sender: UITextField) {
+        Persistance.shared.userSurname = sender.text
+    }
 
 }
 
