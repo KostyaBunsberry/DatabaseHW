@@ -28,11 +28,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nameChanged(sender: UITextField) {
-        Persistance.shared.userName = sender.text
+        Persistance.shared.userName = sender.text!
+        name = sender.text!
+        nameLabel.text = "Ваше имя: \(surname) \(name)"
     }
     
     @IBAction func surnameChanged(sender: UITextField) {
-        Persistance.shared.userSurname = sender.text
+        Persistance.shared.userSurname = sender.text!
+        name = sender.text!
+        nameLabel.text = "Ваше имя: \(surname) \(name)"
     }
 
 }
