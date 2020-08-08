@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
+    
     var name = ""
     var surname = ""
     
@@ -18,10 +21,12 @@ class ViewController: UIViewController {
         
         if let name = Persistance.shared.userName {
             self.name = name
+            self.nameTextField.text = name
         }
         
         if let surname = Persistance.shared.userSurname {
             self.surname = surname
+            self.surnameTextField.text = surname
         }
         
         nameLabel.text = "Ваше имя: \(surname) \(name)"

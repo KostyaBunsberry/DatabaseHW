@@ -56,6 +56,8 @@
                     <tabBarItem key="tabBarItem" title="Person" image="person" catalog="system" id="TSB-pt-CuG"/>
                     <connections>
                         <outlet property="nameLabel" destination="1vx-cC-8lw" id="QHb-ne-BdE"/>
+                        <outlet property="nameTextField" destination="kZn-nE-BsL" id="Iyu-Yj-cny"/>
+                        <outlet property="surnameTextField" destination="Tsk-36-Sov" id="tqU-VR-6Gi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -299,7 +301,7 @@
                                 <rect key="frame" x="0.0" y="247" width="414" height="566"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="weatherDailyCell" id="vwt-19-4xj" customClass="DayWeatherCell" customModule="hw12" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="weatherDailyCell" id="vwt-19-4xj" customClass="DayWeatherCell" customModule="hw14" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwt-19-4xj" id="bWU-kr-hj8">
